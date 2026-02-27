@@ -7,7 +7,7 @@ export default function HeroSection() {
         <img
           src="/images/logo-cropped.png?v=2"
           alt="Huberts Hausmeisterservice Erlangen – Logo mit Handwerker-Maskottchen und 24h Notdienst"
-          className="h-28 w-auto sm:h-36 lg:h-44"
+          className="w-full max-w-lg sm:max-w-xl lg:max-w-2xl h-auto"
         />
       </div>
 
