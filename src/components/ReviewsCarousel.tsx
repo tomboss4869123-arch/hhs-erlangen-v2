@@ -212,6 +212,15 @@ export default function ReviewsCarousel() {
         className="relative"
         onMouseEnter={() => { pausedRef.current = true; }}
         onMouseLeave={() => { pausedRef.current = false; }}
+        onTouchStart={() => { pausedRef.current = true; }}
+        onTouchEnd={() => {
+          // Resume auto-scroll after a short delay so the swipe momentum finishes
+          setTimeout(() => {
+            pausedRef.current = false;
+            const el = scrollRef.current;
+            if (el) posRef.current = el.scrollLeft;
+          }, 2000);
+        }}
       >
         {/* Fade edges */}
         <div
